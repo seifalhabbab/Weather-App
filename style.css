@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #222;
+}
+
+.card {
+  width: 100%;
+  max-width: 470px;
+  background: linear-gradient(135deg, #00feba, #5b8cff);
+  margin: 100px auto 0;
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .card {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Start Search */
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 350px) {
+  .search {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 18px;
+  flex: 1;
+  margin-right: 16px;
+  max-width: 100%;
+}
+
+@media (max-width: 350px) {
+  .search input {
+    margin-right: 0;
+  }
+}
+
+.search input::placeholder {
+  opacity: 0.5;
+  transition: 0.2s opacity;
+}
+
+.search input:focus::placeholder {
+  opacity: 0;
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s background;
+  flex-shrink: 0;
+}
+
+/* .search button::before {
+  content: "";
+  background-color: #00feba;
+  width: 0%;
+  height: 0%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s width, 0.2s height;
+}
+.search button:hover::before {
+  width: 100%;
+  height: 100%;
+} */
+.search button:hover {
+  box-shadow: 0 0 10px #00feba;
+}
+
+.search button img {
+  position: relative;
+  width: 18px;
+  z-index: 1;
+}
+
+/* End Search */
+
+/* Start Error */
+.error {
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+.error.active {
+  display: block;
+}
+
+/* End Error */
+/* Start Weather */
+.weather-icon {
+  width: 170px;
+  margin: 30px auto 0;
+}
+
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+  position: relative;
+}
+
+.weather h1::after {
+  content: "°";
+  position: absolute;
+  font-size: 40px;
+  top: 10px;
+}
+
+.weather h1 sup {
+  position: absolute;
+  top: 10px;
+  font-size: 40px;
+}
+
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -5px;
+}
+
+.weather .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.weather .col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.weather .col img {
+  width: 40px;
+}
+
+.weather .humidity,
+.weather .wind {
+  font-size: 30px;
+  position: relative;
+  width: fit-content;
+}
+
+.weather .humidity::after {
+  content: "%";
+  position: absolute;
+  font-size: 10px;
+  bottom: 5px;
+}
+
+.weather .wind::after {
+  content: "km/h";
+  position: absolute;
+  font-size: 10px;
+  bottom: 5px;
+}
+
+.weather .text {
+  font-size: 12px;
+}
+
+.weather {
+  display: none;
+}
+/* End Weather */
